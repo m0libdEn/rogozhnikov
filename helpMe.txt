@@ -1,0 +1,364 @@
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> git clone https://github.com/m0libdEn/rogozhnikov.git .
+Cloning into '.'...
+remote: Enumerating objects: 39, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 39 (delta 9), reused 28 (delta 2), pack-reused 0
+Receiving objects: 100% (39/39), 9.31 KiB | 9.31 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (todolist-v2)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: danila m0libden rogozhnikov
+license: (ISC)
+About to write to C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\package.json:
+
+{
+  "name": "todolist-v2",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000r\u0000o\u0000g\u0000o\u0000z\u0000h\u0000n\u0000i\u0000k\u0000o\u0000v\u0000\r\u0000 \u0000#\u0000 \u0000r\u0000o\u0000g\u0000o\u0000z\u0000h\u0000n\u0000i\u0000k\u0000o\u0000v\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "danila m0libden rogozhnikov",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm install --save-dev parcel
+npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+
+added 189 packages, and audited 190 packages in 22s
+
+85 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm install -g sass
+
+added 17 packages in 875ms
+
+3 packages are looking for funding
+  run `npm fund` for details
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel
+parcel : The term 'parcel' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ parcel
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (parcel:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> sass
+sass : File C:\Users\Danila\AppData\Roaming\npm\sass.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ sass
++ ~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm install -g parcel-bundler
+npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated domexception@1.0.1: Use your platform's native DOMException instead
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+npm WARN deprecated parcel-bundler@1.12.5: Parcel v1 is no longer maintained. Please migrate to v2, which is published under the 'parcel' package. See https://v2.parceljs.org/getting-started/migration for details.
+npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+
+added 814 packages in 34s
+
+86 packages are looking for funding
+  run `npm fund` for details
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel
+parcel : File C:\Users\Danila\AppData\Roaming\npm\parcel.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ parcel
++ ~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel
+parcel : File C:\Users\Danila\AppData\Roaming\npm\parcel.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ parcel
++ ~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2>
+ *  History restored 
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel
+parcel : File C:\Users\Danila\AppData\Roaming\npm\parcel.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ parcel
++ ~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html
+parcel : File C:\Users\Danila\AppData\Roaming\npm\parcel.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ parcel build index.html
++ ~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2>
+ *  History restored 
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html
+parcel : File C:\Users\Danila\AppData\Roaming\npm\parcel.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ parcel build index.html
++ ~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html
+×  C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\src\sass\style.scss: ENOENT: no such file or directory, open 'C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\src\sass\style.scss'
+Error: ENOENT: no such file or directory, open 'C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\src\sass\style.scss'
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html
+×  C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\js\script.js: ENOENT: no such file or directory, open 'C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\js\script.js'
+Error: ENOENT: no such file or directory, open 'C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\js\script.js'
+| Installing sass...
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html
+×  C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\sass\style.scss:undefined:undefined: plugin is not a function
+    at LazyResult.run (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:288:14)
+    at LazyResult.asyncTick (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:212:26)
+    at C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:254:14
+    at new Promise (<anonymous>)
+    at LazyResult.async (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:250:23)
+    at LazyResult.then (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:131:17)
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm install --seve-dev sass
+
+up to date, audited 241 packages in 644ms
+
+91 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> sass
+Compile Sass to CSS.
+
+Usage: sass <input.scss> [output.css]
+       sass <input.scss>:<output.css> <input/>:<output/> <dir/>
+
+=== Input and Output ===================
+    --[no-]stdin                   Read the stylesheet from stdin.
+    --[no-]indented                Use the indented syntax for input from stdin.
+-I, --load-path=<PATH>             A path to use when resolving imports.
+                                   May be passed multiple times.
+-p, --pkg-importer=<TYPE>          Built-in importer(s) to use for pkg: URLs.
+
+          [node]                   Load files like Node.js package resolution.
+
+-s, --style=<NAME>                 Output style.
+                                   [expanded (default), compressed]
+    --[no-]charset                 Emit a @charset or BOM for CSS with non-ASCII characters.
+                                   (defaults to on)
+    --[no-]error-css               When an error occurs, emit a stylesheet describing it.
+                                   Defaults to true when compiling to a file.
+    --update                       Only compile out-of-date stylesheets.
+
+=== Source Maps ========================
+    --[no-]source-map              Whether to generate source maps.
+                                   (defaults to on)
+    --source-map-urls              How to link from source maps to source files.
+                                   [relative (default), absolute]
+    --[no-]embed-sources           Embed source file contents in source maps.
+    --[no-]embed-source-map        Embed source map contents in CSS.
+
+=== Warnings ===========================
+-q, --[no-]quiet                   Don't print warnings.
+    --[no-]quiet-deps              Don't print compiler warnings from dependencies.
+                                   Stylesheets imported through load paths count as dependencies.
+    --[no-]verbose                 Print all deprecation warnings even when they're repetitive.
+    --fatal-deprecation            Deprecations to treat as errors. You may also pass a Sass
+                                   version to include any behavior deprecated in or before it.
+                                   See https://sass-lang.com/documentation/breaking-changes for
+                                   a complete list.
+
+          [abs-percent]            Passing percentages to the Sass abs() function.
+          [bogus-combinators]      Leading, trailing, and repeated combinators.
+          [call-string]            Passing a string directly to meta.call().
+          [color-module-compat]    Using color module functions in place of plain CSS functions.
+          [duplicate-var-flags]    Using !default or !global multiple times for one variable.
+          [elseif]                 @elseif.
+          [function-units]         Passing invalid units to built-in functions.
+          [moz-document]           @-moz-document.
+          [new-global]             Declaring new variables with !global.
+          [null-alpha]             Passing null as alpha in the JS API.
+          [slash-div]              / operator for division.
+          [strict-unary]           Ambiguous + and - operators.
+
+    --future-deprecation           Opt in to a deprecation early.
+
+          [import]                 @import rules.
+
+=== Other ==============================
+-w, --watch                        Watch stylesheets and recompile when they change.
+    --[no-]poll                    Manually check for changes rather than using a native watcher.
+                                   Only valid with --watch.
+    --[no-]stop-on-error           Don't compile more files once an error is encountered.
+-i, --interactive                  Run an interactive SassScript shell.
+-c, --[no-]color                   Whether to use terminal colors for messages.
+    --[no-]unicode                 Whether to use Unicode characters for messages.
+    --[no-]trace                   Print full Dart stack traces for exceptions.
+-h, --help                         Print this usage information.
+    --version                      Print the version of Dart Sass.
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html    
+×  C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\sass\style.scss:undefined:undefined: plugin is not a function
+    at LazyResult.run (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:288:14)
+    at LazyResult.asyncTick (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:212:26)
+    at C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:254:14
+    at new Promise (<anonymous>)
+    at LazyResult.async (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:250:23)
+    at LazyResult.then (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:131:17)
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm install --save-dev parcel
+
+up to date, audited 241 packages in 1s
+
+91 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html      
+×  C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\sass\style.scss:undefined:undefined: plugin is not a function
+    at LazyResult.run (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:288:14)
+    at LazyResult.asyncTick (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:212:26)
+    at C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:254:14
+    at new Promise (<anonymous>)
+    at LazyResult.async (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:250:23)
+    at LazyResult.then (C:\Users\Danila\AppData\Roaming\npm\node_modules\parcel-bundler\node_modules\postcss\lib\lazy-result.js:131:17)
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm uninstall -g parcel-bundler
+
+removed 814 packages in 1s
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm install parcel --save-dev
+
+up to date, audited 241 packages in 745ms
+
+91 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build index.html
+parcel : The term 'parcel' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ parcel build index.html
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (parcel:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel
+parcel : The term 'parcel' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ parcel
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (parcel:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run start 
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+Server running at http://localhost:1234
+✨ Built in 363ms
+[Error: Error opening directory]
+[Error: Error opening directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run start
+
+> todolist-v2@1.0.0 start
+> parcel
+
+Server running at http://localhost:1234
+🚨 Build failed.
+
+unknown: Could not find entry: C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2\.
+[Error: Error opening directory]
+[Error: Error opening directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm start    
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+[Error: Unable to open snapshot file: No such file or directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm start
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+[Error: Unable to open snapshot file: No such file or directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run start
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+[Error: Unable to open snapshot file: No such file or directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run start
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+[Error: Unable to open snapshot file: No such file or directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run
+Lifecycle scripts included in todolist-v2@1.0.0:
+  start
+    parcel index.html
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run start
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+[Error: Unable to open snapshot file: No such file or directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm parcel build
+Unknown command: "parcel"
+
+To see a list of supported npm commands, run:
+  npm help
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> parcel build    
+parcel : The term 'parcel' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ parcel build
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (parcel:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run build   
+npm ERR! code EJSONPARSE
+npm ERR! JSON.parse Invalid package.json: JSONParseError: Expected ',' or '}' after property value in JSON at position 362 while parsing near "...cel index.html\"\n    \"build\": \"parcel bui..."
+npm ERR! JSON.parse Failed to parse JSON data.
+npm ERR! JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+
+npm ERR! A complete log of this run can be found in: C:\Users\Danila\AppData\Local\npm-cache\_logs\2024-03-20T04_01_18_205Z-debug-0.log
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run build
+
+[Error: Unable to open snapshot file: No such file or directory]
+PS C:\Users\Danila\Desktop\Вывучы маі знічкі\todolist v2> npm run start
+
+> todolist-v2@1.0.0 start
+> parcel index.html
+
+[Error: Unable to open snapshot file: No such file or directory]
