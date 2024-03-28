@@ -10,6 +10,8 @@ const search = document.getElementById('search')
 
 const list = document.getElementById('list')
  
+
+
 let id = 0
 let tasks = [] // массив всех заданий\
 let done = 0 // значение выполнененных заданий 
@@ -26,6 +28,9 @@ function Task(info){
     this.info = info
     this.status = false // задание по дефолту не выполнено
     this.id = id++
+    let getDate = new Date()
+    this.date = `${getDate.getHours()}:${getDate.getMinutes()} ${getDate.getDate()} ${getDate.toLocaleString('default',{month:'short'})}`
+
 }
 
 const createTask = (el) => {  
@@ -59,9 +64,7 @@ const createTask = (el) => {
   // Создание блока с датой задания
   let taskDate = document.createElement('p')
   taskDate.classList.add('task__date')
-  let currentDate = new Date();
-  let formattedDate = `${currentDate.getDate()}.${currentDate.getMonth() + 1}.${currentDate.getFullYear()}`;
-  taskDate.textContent = formattedDate;
+  taskDate.textContent = el.date;
   additionalInfoContainer.appendChild(taskDate);
 
   // Добавление созданных элементов в DOM
@@ -77,6 +80,7 @@ const createTask = (el) => {
   completedButton.addEventListener('click', function(){
     el.status = true
     doneCouter()
+    saveTask()
   })
   deleteButton.addEventListener('click', function(){
     el.status?doneCouter(-1):doneCouter(0)
@@ -84,16 +88,36 @@ const createTask = (el) => {
     list.removeChild(taskContainer)
     taskCounter()
     doneCouter()
+    saveTask()
   })
 }
 
+function getDate(key){
+  return JSON.parse(localStorage.getItem(key))
+}
+function setDate(key,data){
+  localStorage.setItem(key, JSON.stringify(data))
+}
 
+function loadTasks(){
+  const storedTask = getDate('todos')
+  if(storedTask){
+    tasks = storedTask
+    tasks.forEach(el => createTask(el))
+    taskCounter()
+    doneCouter()
+  }
+}
+function saveTask(){
+  setDate('todos',tasks)
+}
 
 add.addEventListener('click',function(){
     let task = new Task(input.value)
     tasks.push(task)
     createTask(task)
     taskCounter()
+    saveTask()
 })
 
 deleteAll.onclick = () => {
@@ -102,6 +126,7 @@ deleteAll.onclick = () => {
     done=0
     doneCouter()
     taskCounter()
+    saveTask();
 
 }
 deleteLast.onclick = () => {
@@ -110,6 +135,7 @@ deleteLast.onclick = () => {
     list.removeChild(list.lastChild)
     taskCounter()
     doneCouter()
+    saveTask();
 }
 
 showCompleted.addEventListener('click', function(){
@@ -129,7 +155,6 @@ search.addEventListener('keyup', function(el){
     const searchTasks = tasks.filter(task => task.info.toLowerCase().includes(search.value.toLowerCase()))
     searchTasks.forEach(el=>createTask(el))
   }
-})
+}) 
 
-
-
+window.addEventListener('load', loadTasks())
