@@ -1,0 +1,16 @@
+{
+  "name": "homework__toodlist-2.0",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000r\u0000o\u0000g\u0000o\u0000z\u0000h\u0000n\u0000i\u0000k\u0000o\u0000v\u0000\r\u0000 \u0000#\u0000 \u0000r\u0000o\u0000g\u0000o\u0000z\u0000h\u0000n\u0000i\u0000k\u0000o\u0000v\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./npm run buildindex.html --no-source-maps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

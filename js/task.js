@@ -2,8 +2,13 @@ export function Task(info) {
     this.info = info;
     this.status = false;
     this.id = id++;
-    const { getHours, getMinutes, getDate, toLocaleString } = new Date();
-    this.date = `${getHours()}:${getMinutes()} ${getDate()} ${toLocaleString('default',{month:'short'})}`;
+    const { getHours, getMinutes, getDate, toLocaleString } = Date.prototype;
+    const currentDate = new Date();
+    const hours = getHours.call(currentDate);
+    const minutes = getMinutes.call(currentDate);
+    const date = getDate.call(currentDate);
+    const month = toLocaleString.call(currentDate, 'default', { month: 'short' });
+    this.date = `${hours}:${minutes} ${date} ${month}`;
 }
 
 let id = 0;
@@ -90,4 +95,12 @@ function getDate(key) {
 
 function setDate(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
+}
+
+
+export let taskCounter = () => all.innerHTML = tasks.length // cчетчик всех заданий
+export let doneCouter = () => {
+  let counter = 0
+  tasks.forEach(el=>el.status===true?counter++:counter+=0)
+  completed.innerHTML = counter
 }

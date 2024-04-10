@@ -1,4 +1,4 @@
-import {Task, createTask, saveTask, loadTasks, cleanList, tasks} from './task.js'
+import {Task, createTask, saveTask, loadTasks, cleanList, tasks, taskCounter, doneCouter} from './task.js'
 const deleteAll = document.getElementById('deleteAll')
 const deleteLast = document.getElementById('deleteLast')
 const input = document.getElementById('input')
@@ -15,18 +15,8 @@ const list = document.getElementById('list')
 
 let id = 0
 let done = 0 // значение выполнененных заданий 
-let taskCounter = () => all.innerHTML = tasks.length // cчетчик всех заданий
-let doneCouter = () => {
-  let counter = 0
-  tasks.forEach(el=>el.status===true?counter++:counter+=0)
-  completed.innerHTML = counter
-}
-function getDate(key){
-  return JSON.parse(localStorage.getItem(key))
-}
-function setDate(key,data){
-  localStorage.setItem(key, JSON.stringify(data))
-}
+
+
 
 add.addEventListener('click',function(){
     let task = new Task(input.value)
