@@ -1,6 +1,7 @@
 const URL='https://6615ddf3b8b8e32ffc7bdc0a.mockapi.io/product'
 const list =document.getElementById('list')
 const counter = document.getElementById('counter')
+const search = document.getElementById('search')
 
 //
 //const sum = document.getElementById('sum')
@@ -8,8 +9,11 @@ const counter = document.getElementById('counter')
 let cartArr = [] // array of items which will be on cart
 
 export function countCart(){
+    console.log(cartArr.length);
     counter.innerHTML = cartArr.length
 }
+
+let cleanList = () => {while(list.firstChild)list.removeChild(list.firstChild)}
 
 function getProducts(){ //getting all prodtucts from API
     return new Promise((resolve, reject)=>{
@@ -56,7 +60,7 @@ function layoutProduct(el) {
 
     const priceParagraph = document.createElement('p');
     priceParagraph.classList.add('product__price');
-    priceParagraph.textContent = el.price;
+    priceParagraph.textContent = `$${el.price}`;
 
     const name = document.createElement('h3');
     name.classList.add('product__name');
@@ -139,7 +143,18 @@ function layoutProduct(el) {
     const mainElement = document.querySelector('main')
     mainElement.appendChild(popupDiv); 
 }
-
+search.addEventListener('keyup', function(el){
+    if (el.code === 'Enter') {
+     const searchText = search.value.toLowerCase(); // Получаем значение поля поиска и приводим его к нижнему регистру
+     cleanList();
+     getProducts()
+     .then(products => {
+         const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchText));
+         filteredProducts.forEach(product => layoutProduct(product));
+     })
+     .catch(error => console.error('Search exception', error));
+    }
+ });
 
 function layoutCart(el){
     cartArr.push(el)
@@ -148,9 +163,10 @@ function layoutCart(el){
 
 }
 
+
 getProducts()
 .then(products => products.forEach(el=>layoutProduct(el)))
+countCart()
 window.addEventListener('load',function(){
     loadData()
 })
-countCart()

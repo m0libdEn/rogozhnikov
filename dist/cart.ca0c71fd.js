@@ -128,6 +128,7 @@ exports.getData = getData;
 var URL = 'https://6615ddf3b8b8e32ffc7bdc0a.mockapi.io/product';
 var list = document.getElementById('list');
 var counter = document.getElementById('counter');
+var search = document.getElementById('search');
 
 //
 //const sum = document.getElementById('sum')
@@ -135,8 +136,12 @@ var counter = document.getElementById('counter');
 var cartArr = []; // array of items which will be on cart
 
 function countCart() {
+  console.log(cartArr.length);
   counter.innerHTML = cartArr.length;
 }
+var cleanList = function cleanList() {
+  while (list.firstChild) list.removeChild(list.firstChild);
+};
 function getProducts() {
   //getting all prodtucts from API
   return new Promise(function (resolve, reject) {
@@ -179,7 +184,7 @@ function layoutProduct(el) {
   infoContainer.classList.add('product__info');
   var priceParagraph = document.createElement('p');
   priceParagraph.classList.add('product__price');
-  priceParagraph.textContent = el.price;
+  priceParagraph.textContent = "$".concat(el.price);
   var name = document.createElement('h3');
   name.classList.add('product__name');
   name.textContent = el.name;
@@ -244,6 +249,22 @@ function layoutProduct(el) {
   var mainElement = document.querySelector('main');
   mainElement.appendChild(popupDiv);
 }
+search.addEventListener('keyup', function (el) {
+  if (el.code === 'Enter') {
+    var searchText = search.value.toLowerCase(); // Получаем значение поля поиска и приводим его к нижнему регистру
+    cleanList();
+    getProducts().then(function (products) {
+      var filteredProducts = products.filter(function (product) {
+        return product.name.toLowerCase().includes(searchText);
+      });
+      filteredProducts.forEach(function (product) {
+        return layoutProduct(product);
+      });
+    }).catch(function (error) {
+      return console.error('Search exception', error);
+    });
+  }
+});
 function layoutCart(el) {
   cartArr.push(el);
   countCart();
@@ -254,10 +275,10 @@ getProducts().then(function (products) {
     return layoutProduct(el);
   });
 });
+countCart();
 window.addEventListener('load', function () {
   loadData();
 });
-countCart();
 },{}],"javascript/cart.js":[function(require,module,exports) {
 "use strict";
 
@@ -291,11 +312,32 @@ var layoutCart = function layoutCart(el) {
   var heading = document.createElement("h2");
   heading.classList.add("cart__item-describtion");
   heading.textContent = el.name;
+  var deleteWrapper = document.createElement('div');
+  deleteWrapper.classList.add('cart__delete-wrapper');
+  var deleteImage = document.createElement('img');
+  deleteImage.classList.add('cart__delete');
+  deleteImage.src = "delete.a8202e05.svg";
+  deleteImage.alt = 'delete';
+  deleteWrapper.appendChild(deleteImage);
+  deleteWrapper.addEventListener('click', function () {
+    var removed = false;
+    data = data.filter(function (item) {
+      if (item.id === el.id && !removed) {
+        removed = true;
+        return false; // Удаляем только первый товар с данным id
+      }
+      return true;
+    });
+    localStorage.setItem('cart', JSON.stringify(data));
+    cartList.removeChild(cartItem);
+    getInfo();
+  });
   itemInfo.appendChild(heading);
+  itemInfo.appendChild(deleteWrapper);
   cartItem.appendChild(itemInfo);
   var price = document.createElement("p");
   price.classList.add("cart__item-price");
-  price.textContent = el.price;
+  price.textContent = "$".concat(el.price);
   cartItem.appendChild(price);
   cartList.appendChild(cartItem);
 };
@@ -306,7 +348,6 @@ if (data.length !== 0) {
   empty.style.display = 'none';
 }
 getInfo();
-showAllinCart(data);
 },{"./script":"javascript/script.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -332,7 +373,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49222" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53674" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

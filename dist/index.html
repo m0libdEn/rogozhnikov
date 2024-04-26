@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.78032849.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>CalmFruit</title>
 <script src="/style.78032849.js"></script></head>
 <body>
     <header class="header">
         <div class="container header__container">
             <a href="/index.html" class="header__logo">CALMFRUIT</a>
-            <input type="text" class="header__search" placeholder="Найти на СпокойныйФрукт">
+            <input type="text" class="header__search" placeholder="Найти на СпокойныйФрукт" id="search">
             <a class="header__cart" href="/cart.html">
                <div id="cartLogo" class="header__cart-wrapper">
                     <img src="/cart.5ade5063.svg" alt="cart" class="header__cart-logo">
@@ -22,6 +23,17 @@
         </div>
     </header>
     <main>
+        <div class="container swiper__container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/swipe1.0a12ba7d.webp" alt="swipe1" srcset=""></div>
+                  <div class="swiper-slide"><img src="/swipe2.a89c720e.webp" alt="swipe1" srcset=""></div>
+                  <div class="swiper-slide"><img src="/swipe3.84ff5482.webp" alt="/swipe3" srcset=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        </div>
+        </div>
         <div id="list" class="list container">
         </div>
         <div id="popup1" class="popup">
@@ -30,4 +42,11 @@
     </main>
 </body>
 <script src="/script.e587773d.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});</script>
 </html>
