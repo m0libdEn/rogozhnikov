@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>Моя корзина</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">CALMFRUIT</a>
+            <input type="text" class="header__search" placeholder="Найти на СпокойныйФрукт" id="search">
+            <a class="header__cart">
+               <div id="cartLogo" class="header__cart-wrapper">
+                    <img src="./img/logos/cart.svg" alt="cart" class="header__cart-logo">
+                    <p class="header__cart-counter" id="counter"></p>
+               </div>
+               <p class="header__title">Корзина</p>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="cart container">
+            <div class="cart__list" id="cartList">
+                <h2 class="cart__empty" id="empty">В корзине пока пусто!</h2>
+            </div>
+            <div class="cart__summary">
+                <p class="cart__info">Товары, <span id="quantityOfproducts">0</span> шт</p>
+                <div class="cart__ammount">
+                    <h3 class="cart__ammount-total">Итого</h3>
+                    <h3 class="cart__ammount-sum" >$<span id="sum">0</span></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./javascript/cart.js"></script>
+</html>
