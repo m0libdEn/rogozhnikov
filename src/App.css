@@ -4,6 +4,7 @@
     gap: 20px;
     width: 1200px;
     margin: 0 auto;
+    padding: 100px;
 }
 
 .post {
@@ -59,6 +60,7 @@
 .post:first-child .post__image-wrapper{
     flex: 0 0 400px;
     overflow: hidden;
+    max-height: 100%;
 }
 
 .post__image {
@@ -98,4 +100,28 @@
     justify-content: center;
     align-items:center;
     height: 95vh;
+}
+
+.header__options{
+    display: flex;
+    justify-content: center;
+    list-style-type:none;
+    gap: 40px;
+    font-size: 18px;
+}
+
+.hedaer__option-info{
+    text-decoration: none;
+    color:inherit;
+}
+.header{
+    position: fixed;
+    background-color: purple;
+    color:#fff;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body{
+    margin: 0;
 }

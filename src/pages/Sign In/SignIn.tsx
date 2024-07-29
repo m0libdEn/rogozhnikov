@@ -1,24 +1,20 @@
 import {useState } from "react";
-
-interface Props {
-    isSigned:() => void
-}
+import { useNavigate } from "../../../node_modules/react-router-dom/dist/index";
 
 
-
-const SignIn = (props:Props) => {
-    const {isSigned} = props
-
+const SignIn = () => {
+    
     const [email, setEmail] = useState<string>('');
     const [pass, setPass] = useState<string>('');
-    const [status, setStatus] = useState(false);
+
+    const navigate = useNavigate()
 
     const handleClick = () => {
         if(email !=='' && pass !==''){
-            setStatus(true)
             setTimeout(()=>{
-                isSigned()
-            }, 2500)
+                navigate('/home')
+            }
+            , 2500)
         }
     }
 

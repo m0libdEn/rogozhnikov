@@ -1,3 +1,7 @@
+import { useDispatch, useSelector } from "../../../node_modules/react-redux/dist/react-redux";
+import { useNavigate } from "../../../node_modules/react-router-dom/dist/index";
+import { addFavourite } from "../../redux/reducers/likeReducer/favouriteReducer";
+
 interface Props {
     id: number;
     image?: string;
@@ -9,10 +13,21 @@ interface Props {
 }
 
 const Post = (props:Props) => {
-    const {image, text, date, title} = props
+    const {id, image, text, date, title} = props
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const favourites = useSelector(state => state.post);
+    console.log(favourites);
+    
+
+    const handleCick = () => {navigate(`/post/${id}`)}
+
+    const handleFav = () => {
+        dispatch(addFavourite(props));
+    }
 
     return(
-        <div className = "post">
+        <div className = "post" onClick={handleCick}>
             <div className="post__container">
             <div className = "post__info">
                 <p className="post__info-date">{date}</p>
@@ -25,6 +40,10 @@ const Post = (props:Props) => {
                 </div>
              )}
             </div>
+            <button onClick={(el)=>{
+                el.stopPropagation();
+                handleFav()
+                }}>test</button>
         </div>
     )
 }

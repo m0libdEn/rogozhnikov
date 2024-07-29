@@ -1,0 +1,1 @@
+export const url = 'https://studapi.teachmeskills.by/blog/posts/?limit=101'

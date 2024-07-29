@@ -1,28 +1,35 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "../../../node_modules/react-redux/dist/react-redux";
 import { url } from "../../consts";
+import { setPosts } from "../../redux/reducers/postReducer/actions";
+import fetchData from "./getFetch";
 import Post from "./Post";
 
 
 const PostList = () => {
-    const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        fetch(url)
-          .then((response) => response.json())
-          .then((data) => setPosts(data))
-          .catch((error) => console.error("Error fetching posts:", error));
-      }, []);
+    const dispatch = useDispatch( )
+    //const [post, setPost] = useState([]);
+    const posts = useSelector(state => state.post.posts)
+    
+
+    useEffect( () => {
+      const getPosts = async () => {
+        const data = await fetchData(url);
+        dispatch(setPosts(data))
+      };
       
-  
+      getPosts();
+    },[dispatch]);
     return(
         <div className="posts__list">
           {posts.map((post) => (
             <Post
-              key={post.id}
-              date={"Jun - 06 - 2024"}
+              id={post.id}
+              date={post.date}
               title={post.title}
-              text={post.body}
+              text={post.description}
               image={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWYvhYGA__NFDSPignPsIgi7W__JcIT1CpQ&s"
+                post.image
               }
             />
           ))}
